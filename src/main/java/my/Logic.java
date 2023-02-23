@@ -1,6 +1,7 @@
 package my;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Logic {
@@ -47,31 +48,13 @@ public class Logic {
 
 
     public List<House> searchByArea(List<House> list, double areaBorder) {
-        List<House> filteredHouses = new ArrayList<>();
-
-        Map<Integer, Double> areasByFloor = new HashMap<>();
-
-        for (House house : list) {
-            areasByFloor.put(house.getFloor(), house.getArea());
-        }
-
-        List<Map.Entry<Integer, Double>> sortedAreasByFloor = areasByFloor.entrySet().stream()
-                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
-                .collect(Collectors.toList());
-
-        for (Map.Entry<Integer, Double> entry : sortedAreasByFloor) {
-            if (entry.getValue() > areaBorder) {
-                for (House house : list) {
-                    if (house.getFloor() == entry.getKey()) {
-                        filteredHouses.add(house);
-                        break;
-                    }
-                }
-            }
-        }
-
-        return filteredHouses;
+        return new ArrayList<>(list.stream()
+                .filter(house -> house.getArea() > areaBorder)
+                .sorted(Comparator.comparing(House::getArea).reversed())
+                .collect(Collectors.toMap(House::getFloor, Function.identity(), (h1, h2) -> h1))
+                .values());
     }
+
 
     public List<House> sortByArea(List<House> list) {
         return list.stream()

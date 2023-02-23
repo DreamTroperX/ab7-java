@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="914.0" prefWidth="485.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="my.Controller">
+   <children>
+      <Label layoutX="19.0" layoutY="14.0" text="number:" />
+      <Label layoutX="37.0" layoutY="48.0" text="area:" />
+      <Label layoutX="207.0" layoutY="14.0" text="floor:" />
+      <TextField fx:id="numberT" layoutX="67.0" layoutY="10.0" prefHeight="0.0" prefWidth="63.0" />
+      <TextField fx:id="areaT" layoutX="67.0" layoutY="44.0" prefHeight="17.0" prefWidth="63.0" />
+      <Label layoutX="139.0" layoutY="48.0" text="numberOfRooms:" />
+      <TextField fx:id="floorT" layoutX="237.0" layoutY="10.0" prefHeight="0.0" prefWidth="63.0" />
+      <TextField fx:id="numberOfRoomsT" layoutX="237.0" layoutY="44.0" prefHeight="0.0" prefWidth="63.0" />
+      <TextField fx:id="streetT" layoutX="356.0" layoutY="10.0" prefHeight="17.0" prefWidth="63.0" />
+      <Label layoutX="321.0" layoutY="14.0" text="street:" />
+      <Button fx:id="addButton" layoutX="331.0" layoutY="44.0" mnemonicParsing="false" onAction="#toList" text="Add to list" />
+      <TextArea fx:id="listTF" layoutX="14.0" layoutY="77.0" prefHeight="66.0" prefWidth="457.0" />
+      <Button fx:id="removeButton" layoutX="14.0" layoutY="150.0" mnemonicParsing="false" onAction="#remove" text="remove:" />
+      <TextField fx:id="indexT" layoutX="81.0" layoutY="150.0" prefHeight="0.0" prefWidth="63.0" />
+      <TextArea fx:id="removeTF" layoutX="14.0" layoutY="183.0" prefHeight="66.0" prefWidth="457.0" />
+      <Button fx:id="searchNumberOfRoomsAndFloorB" layoutX="14.0" layoutY="363.0" mnemonicParsing="false" onAction="#searchNumFloor" text="search:" />
+      <TextField fx:id="NumOfRT" layoutX="176.0" layoutY="363.0" prefHeight="0.0" prefWidth="63.0" />
+      <TextArea fx:id="NumAndFloorTF" layoutX="14.0" layoutY="396.0" prefHeight="66.0" prefWidth="457.0" />
+      <Button fx:id="searchArea" layoutX="19.0" layoutY="474.0" mnemonicParsing="false" onAction="#searchArea" text="search area:" />
+      <TextField fx:id="areaSortT" layoutX="104.0" layoutY="474.0" prefHeight="0.0" prefWidth="63.0" />
+      <TextArea fx:id="areaTF" layoutX="19.0" layoutY="507.0" prefHeight="66.0" prefWidth="457.0" />
+      <Button fx:id="areaSortB" layoutX="19.0" layoutY="581.0" mnemonicParsing="false" onAction="#sortByArea" text="sort by area:" />
+      <TextArea fx:id="areaSortTF" layoutX="19.0" layoutY="614.0" prefHeight="66.0" prefWidth="457.0" />
+      <Label layoutX="252.0" layoutY="367.0" text="&amp; floor from:" />
+      <TextField fx:id="floorFromT" layoutX="325.0" layoutY="363.0" prefHeight="25.0" prefWidth="45.0" />
+      <Label layoutX="377.0" layoutY="368.0" text="to" />
+      <TextField fx:id="floorToT" layoutX="398.0" layoutY="363.0" prefHeight="25.0" prefWidth="52.0" />
+      <Button fx:id="floorSortB" layoutX="20.0" layoutY="690.0" mnemonicParsing="false" onAction="#sortByFloor" text="sort by floor:" />
+      <TextArea fx:id="floorSortTF" layoutX="20.0" layoutY="723.0" prefHeight="66.0" prefWidth="457.0" />
+      <Button fx:id="listApartmentB" layoutX="20.0" layoutY="798.0" mnemonicParsing="false" onAction="#floorListApartment" text="floor list of apartment:" />
+      <TextArea fx:id="listOfApartmentTF" layoutX="20.0" layoutY="831.0" prefHeight="66.0" prefWidth="457.0" />
+      <Button fx:id="searchNumberOfRoomsButton" layoutX="14.0" layoutY="257.0" mnemonicParsing="false" onAction="#searchNumberOfRooms" text="search numberOfRooms:" />
+      <TextField fx:id="NumberOfRooms" layoutX="176.0" layoutY="257.0" prefHeight="0.0" prefWidth="63.0" />
+      <TextArea fx:id="NumberOfRoomsTF" layoutX="14.0" layoutY="290.0" prefHeight="66.0" prefWidth="457.0" />
+      <Label layoutX="73.0" layoutY="368.0" text=" numberOfRooms" />
+   </children>
+</AnchorPane>
